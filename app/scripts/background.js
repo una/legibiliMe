@@ -11,7 +11,7 @@ console.log('\'Allo \'Allo! Event Page for Browser Action');
 
 // Called when the user clicks on the browser action.
 chrome.browserAction.onClicked.addListener(function(tab) {
-  console.log('Turning ' + tab.url + "red!");
+  console.log('Running myScript.js on ' + tab.url );
   chrome.tabs.executeScript(null, {file: "scripts/myScript.js"});
   chrome.browserAction.setBadgeText({text: 'On'});
 });
