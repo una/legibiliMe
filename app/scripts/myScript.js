@@ -2,13 +2,6 @@ var bgColor = 'wheat',
     fontSize = 20,
     fontWeight = 300;
 
-// function setStyle( objId, propertyObject )
-// {
-//  var elem = document.getElementById(objId);
-//  for (var property in propertyObject)
-//     elem.style[property] = propertyObject[property];
-// }
-
 function changeBody(color, font, weight) {
   var myElement = document.querySelector('body');
   // myElement.setAttribute( 'style', '"' +
@@ -31,9 +24,8 @@ function highlightHandler(e) {
         doStuff(text);
     }
 }
-
 function doStuff(text) {
-  alert(text.parentNode);
+  alert(text.anchorNode.parentElement);
 }
 
 document.oncontextmenu = highlightHandler;
